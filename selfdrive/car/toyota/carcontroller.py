@@ -152,7 +152,7 @@ class CarController(CarControllerBase):
             can_sends.append(set_blindspot_debug_mode(RIGHT_BLINDSPOT, False))
             self._blindspot_debug_enabled_right = False
             # print("bsm debug right, off")
-          if self.frame % self._blindspot_rate == self._blindspot_rate // 2:
+          if self.frame % self._blindspot_rate == self._blindspot_rate / 2:
             can_sends.append(poll_blindspot_status(RIGHT_BLINDSPOT))
             # if CS.out.rightBlinker:
             self._blindspot_frame = self.frame
